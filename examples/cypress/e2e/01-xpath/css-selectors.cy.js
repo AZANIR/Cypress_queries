@@ -29,6 +29,10 @@ describe('CSS Селектори - основні типи', () => {
       // .should('exist') - перевіряє наявність елемента в DOM
       // На відміну від 'be.visible', 'exist' працює навіть для прихованих елементів
       .should('exist')
+
+    cy.xpath('//button[contains(text(),"Submit")]').click();
+    cy.get('button').should('contain', 'Submit').click();
+    cy.contains('button', 'Submit').click();
   })
 
   // Тест 2: Пошук елементів за HTML тегом

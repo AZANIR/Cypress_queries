@@ -130,6 +130,9 @@ describe('Метод cy.get() - основні можливості', () => {
       .should('be.visible')
       // Можна одразу взаємодіяти з елементом
       .type('Тестова задача')
+      .should('have.value', 'Тестова задача')
+    .type('{enter}')
+    .should('have.value', '')
   })
 })
 
